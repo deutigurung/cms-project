@@ -294,6 +294,10 @@ return [
                     'text' => 'Social Link',
                     'url'  => 'social-links',
                 ],
+                [
+                    'text' => 'Testimonials',
+                    'url'  => 'testimonials',
+                ],
             ],
         ],
         ['header' => 'labels'],
