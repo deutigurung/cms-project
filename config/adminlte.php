@@ -265,34 +265,24 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Modules',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Teams',
+                    'url'  => 'teams',
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text'    => 'Blogs',
                     'url'     => '#',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
-                            'url'  => '#',
+                            'text' => 'Blog Category',
+                            'url'  => 'blogCategory',
                         ],
                         [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'text'    => 'Blog',
+                            'url'     => 'blogs',
                         ],
                     ],
                 ],
@@ -356,7 +346,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
