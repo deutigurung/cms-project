@@ -287,8 +287,12 @@ return [
                     ],
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Partners',
+                    'url'  => 'partners',
+                ],
+                [
+                    'text' => 'Social Link',
+                    'url'  => 'social-links',
                 ],
             ],
         ],
