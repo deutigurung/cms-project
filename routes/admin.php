@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -14,3 +15,4 @@ Route::resource('/blogs', BlogController::class);
 Route::resource('/partners', PartnerController::class);
 Route::resource('/social-links', SocialLinkController::class);
 Route::resource('/testimonials', TestimonialController::class);
+Route::resource('/banners', BannerController::class);

@@ -298,6 +298,10 @@ return [
                     'text' => 'Testimonials',
                     'url'  => 'testimonials',
                 ],
+                [
+                    'text' => 'Banners',
+                    'url'  => 'banners',
+                ],
             ],
         ],
         ['header' => 'labels'],
