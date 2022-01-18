@@ -322,6 +322,10 @@ return [
                 ],
             ],
         ],
+        [
+            'text' => 'Pages',
+            'url'  => 'pages',
+        ],
         ['header' => 'Configuration'],
         [
             'text'       => 'General',

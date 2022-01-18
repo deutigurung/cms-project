@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GalleryImageController;
+use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
@@ -23,6 +24,7 @@ Route::resource('/banners', BannerController::class);
 Route::resource('/services', ServiceController::class);
 Route::resource('/galleries', GalleryController::class);
 Route::resource('/images', GalleryImageController::class);
+Route::resource('/pages', PageController::class);
 
 Route::get('/settings', [SettingController::class, 'edit'])->name('settings');
 Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');

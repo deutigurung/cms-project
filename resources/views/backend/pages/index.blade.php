@@ -3,11 +3,11 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Service</h1>
+                <h1>Page</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a class="btn btn-sm btn-success" href="{{ route('services.create') }}">Add</a></li>
+                    <li class="breadcrumb-item"><a class="btn btn-sm btn-success" href="{{ route('pages.create') }}">Add</a></li>
                 </ol>
             </div>
         </div>
@@ -26,25 +26,27 @@
                             <th>Id</th>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>Date</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($services as $service)
+                        @foreach($pages as $page)
                             <tr>
-                                <td>{{ $service->id }}</td>
+                                <td>{{ $page->id }}</td>
                                 <td> <img class="" height="100" width="100"
-                                          src="{{ asset('uploads/services/'.$service->image) }}"
-                                          alt="Service">
+                                          src="{{ asset('uploads/pages/'.$page->image) }}"
+                                          alt="Page">
                                 </td>
-                                <td>{{ $service->title }}</td>
-                                <td>{{ $service->status == 1 ? 'Active' : 'Inactive' }}</td>
+                                <td>{{ $page->title }}</td>
+                                <td>{{ $page->date }}</td>
+                                <td>{{ $page->status == 1 ? 'Active' : 'Inactive' }}</td>
                                 <td>
-                                    <form method="POST" action="{{ route('services.destroy',$service->id) }}" class="confirmation">
+                                    <form method="POST" action="{{ route('pages.destroy',$page->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />
                                         @csrf
-                                        <a href="{{ route('services.edit',$service->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
+                                        <a href="{{ route('pages.edit',$page->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
                                         <button type="submit" title="Delete" class="btn btn-danger btn-action btn-sm"><i class="fas fa-fw fa-cut"></i></button>
                                     </form>
                                 </td>
@@ -56,6 +58,7 @@
                             <th>Id</th>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>Date</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
