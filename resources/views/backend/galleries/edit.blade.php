@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <form role="form" class="form" method="post" action="{{ route('galleries.update',$gallery) }}">
+                <form role="form" class="form" method="post" action="{{ route('galleries.update',$gallery) }}" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('put') }}
                     <div class="card-body">
@@ -18,6 +18,16 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('name') }}</strong>
                                 </span>
+                            @endif
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="file" name="image" class="form-control">
+                            @if(isset($gallery->image))
+                                <img class="" height="100" width="100"
+                                     src="{{ asset('uploads/galleries/'.$gallery->image) }}"
+                                     alt="User profile picture">
                             @endif
                         </div>
                     </div>

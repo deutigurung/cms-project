@@ -24,6 +24,7 @@
                         <thead>
                         <tr>
                             <th>Id</th>
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Actions</th>
                         </tr>
@@ -32,6 +33,11 @@
                         @foreach($galleries as $g)
                             <tr>
                                 <td>{{ $g->id }}</td>
+                                <td>
+                                    <img class="" height="100" width="100"
+                                         src="{{ asset('uploads/galleries/'.$g->image) }}"
+                                         alt="Gallery">
+                                </td>
                                 <td>{{ $g->name }}</td>
                                 <td>
                                     <form method="POST" action="{{ route('galleries.destroy',$g->id) }}" class="confirmation">
@@ -47,6 +53,7 @@
                         <tfoot>
                         <tr>
                             <th>Id</th>
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Actions</th>
                         </tr>

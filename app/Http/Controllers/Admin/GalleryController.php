@@ -44,6 +44,14 @@ class GalleryController extends Controller
         $gallery = Gallery::create([
             'name'      => $request->get('name'),
         ]);
+        if ($request->hasFile('image')) {
+            $file        = $request->file('image');
+            $extension   = $file->getClientOriginalExtension();
+            $destination = 'uploads/galleries/';
+            $file_name   = 'gallery-pic-' . $gallery->id . '.' . $extension;
+            $file->move($destination, $file_name);
+            Gallery::where('id', $gallery->id)->update(['image' => $file_name]);
+        }
         return redirect()->route('galleries.index')->with('success', 'Gallery Added Successfully');
     }
 
@@ -87,6 +95,14 @@ class GalleryController extends Controller
         $gallery->update([
             'name'      => $request->get('name'),
         ]);
+        if ($request->hasFile('image')) {
+            $file        = $request->file('image');
+            $extension   = $file->getClientOriginalExtension();
+            $destination = 'uploads/galleries/';
+            $file_name   = 'gallery-pic-' . $gallery->id . '.' . $extension;
+            $file->move($destination, $file_name);
+            Gallery::where('id', $gallery->id)->update(['image' => $file_name]);
+        }
         return redirect()->route('galleries.index')->with('success', 'Gallery Updated Successfully');
     }
 
