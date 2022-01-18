@@ -303,6 +303,20 @@ return [
                     'url'  => 'testimonials',
                 ],
                 [
+                    'text'    => 'Gallery',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Gallery',
+                            'url'  => 'galleries',
+                        ],
+                        [
+                            'text'    => 'Gallery Images',
+                            'url'     => 'images',
+                        ],
+                    ],
+                ],
+                [
                     'text' => 'Banners',
                     'url'  => 'banners',
                 ],
