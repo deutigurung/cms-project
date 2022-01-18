@@ -269,6 +269,10 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
+                    'text' => 'Services',
+                    'url'  => 'services',
+                ],
+                [
                     'text' => 'Teams',
                     'url'  => 'teams',
                 ],

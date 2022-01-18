@@ -56,7 +56,7 @@
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="{{ route('blogCategory.index') }}" class="btn btn-danger">Cancel</a>
+                        <a href="{{ route('banners.index') }}" class="btn btn-danger">Cancel</a>
                     </div>
                 </form>
             </div>
