@@ -41,7 +41,7 @@ class BannerController extends Controller
             'title' => 'required|string|max:255|unique:banners',
             'description' => 'nullable|string',
             'url' => 'nullable',
-            'image'           => 'nullable|mimes:jpg,jpeg,png|max:2060',
+            'image'           => 'required|mimes:jpg,jpeg,png|max:2060',
         ]);
         //dd($request->all());
         $banner = Banner::create([

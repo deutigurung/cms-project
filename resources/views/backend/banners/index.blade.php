@@ -34,14 +34,17 @@
                         @foreach($banners as $banner)
                             <tr>
                                 <td>{{ $banner->id }}</td>
-                                <td>{{ $banner->name }}</td>
-                                <td>{{ $banner->name }}</td>
+                                <td> <img class="" height="100" width="100"
+                                          src="{{ asset('uploads/banners/'.$banner->image) }}"
+                                          alt="Banner">
+                                </td>
+                                <td>{{ $banner->title }}</td>
                                 <td>{{ $banner->status == 1 ? 'Active' : 'Inactive' }}</td>
                                 <td>
-                                    <form method="POST" action="{{ route('blogCategory.destroy',$banner->id) }}" class="confirmation">
+                                    <form method="POST" action="{{ route('banners.destroy',$banner->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />
                                         @csrf
-                                        <a href="{{ route('blogCategory.edit',$banner->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
+                                        <a href="{{ route('banners.edit',$banner->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
                                         <button type="submit" title="Delete" class="btn btn-danger btn-action btn-sm"><i class="fas fa-fw fa-cut"></i></button>
                                     </form>
                                 </td>

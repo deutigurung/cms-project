@@ -55,7 +55,7 @@
                                     <label for="image">Image</label>
                                     <input type="file" name="image" class="form-control">
                                     @if(isset($blog->image))
-                                        <img class="profile-user-img img-fluid img-circle"
+                                        <img class="" height="100" width="100"
                                              src="{{ asset('uploads/blogs/'.$blog->image) }}"
                                              alt="User profile picture">
                                     @endif

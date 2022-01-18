@@ -35,9 +35,9 @@
                         @foreach($blogs as $blog)
                             <tr>
                                 <td>{{ $blog->id }}</td>
-                                <td> <img class="profile-user-img img-fluid img-circle"
+                                <td> <img class="" height="100" width="100"
                                           src="{{ asset('uploads/blogs/'.$blog->image) }}"
-                                          alt="User profile picture">
+                                          alt="Blog">
                                 </td>
                                 <td>{{ $blog->title }}</td>
                                 <td>{{ $blog->blogCategory->name }}</td>
