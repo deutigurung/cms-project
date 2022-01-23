@@ -2,7 +2,10 @@
 @section('content_header')
     <h1 class="m-0 text-dark">Add Page</h1>
 @stop
-
+@section('adminlte_css')
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/summernote/css/summernote-bs4.css') }}">
+@stop
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -52,7 +55,7 @@
 
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea name="description" class="form-control"></textarea>
+                            <textarea name="description" class="form-control" id="summernote"></textarea>
                             @if ($errors->has('description'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('description') }}</strong>
@@ -79,4 +82,14 @@
             </div>
         </div>
     </div>
+@stop
+@section('adminlte_js')
+    <script src="{{ asset('backend/bootstrap3-wysihtml5-bower/js/bootstrap3-wysihtml5.all.min.js') }}"
+            type="text/javascript"></script>
+    <script src="{{ asset('backend/summernote/js/summernote-bs4.min.js') }}"></script>
+    <script>
+        $(function () {
+            $('#summernote').summernote()
+        });
+    </script>
 @stop
