@@ -3,11 +3,11 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Blog Category</h1>
+                <h1>Faq</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a class="btn btn-sm btn-success" href="{{ route('blogCategory.create') }}">Add</a></li>
+                    <li class="breadcrumb-item"><a class="btn btn-sm btn-success" href="{{ route('faqs.create') }}">Add</a></li>
                 </ol>
             </div>
         </div>
@@ -25,21 +25,21 @@
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>Status</th>
+                            <th>Description</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($blogCategories as $blogCategory)
+                        @foreach($faqs as $faq)
                             <tr>
-                                <td>{{ $blogCategory->id }}</td>
-                                <td>{{ $blogCategory->name }}</td>
-                                <td>{{ $blogCategory->status == 1 ? 'Active' : 'Inactive' }}</td>
+                                <td>{{ $faq->id }}</td>
+                                <td>{{ $faq->name }}</td>
+                                <td>{{ $faq->description }}</td>
                                 <td>
-                                    <form method="POST" action="{{ route('blogCategory.destroy',$blogCategory->id) }}" class="confirmation">
+                                    <form method="POST" action="{{ route('faqs.destroy',$faq->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />
                                         @csrf
-                                        <a href="{{ route('blogCategory.edit',$blogCategory->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
+                                        <a href="{{ route('faqs.edit',$faq->id) }}" class="btn btn-success btn-action btn-sm"><i class="fas fa-fw fa-pen"></i></a>
                                         <button type="submit" title="Delete" class="btn btn-danger btn-action btn-sm"><i class="fas fa-fw fa-cut"></i></button>
                                     </form>
                                 </td>
@@ -50,7 +50,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>Status</th>
+                            <th>Description</th>
                             <th>Actions</th>
                         </tr>
                         </tfoot>
