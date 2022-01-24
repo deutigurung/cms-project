@@ -32,10 +32,10 @@ class FrontendController extends Controller
         $Services = Service::where('status', 1)->latest()->get();
         return view('frontend.services.services',compact('Services'));
     }
-    public function serviceByTitle($title)
+    public function serviceBySlug($slug)
     {
         $ServiceAll = Service::where('status', 1)->latest()->get();
-        $Service = Service::where('title',$title)->where('status', 1)->get();
+        $Service = Service::where('slug',$slug)->where('status', 1)->first();
         return view('frontend.services.service-single',compact('Service','ServiceAll'));
     }
     public function queryForm(Request $request){

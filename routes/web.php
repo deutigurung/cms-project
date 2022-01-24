@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('front.home');
 Route::get('/services', [App\Http\Controllers\FrontendController::class, 'services'])->name('front.services');
-Route::get('/services/{title}', [App\Http\Controllers\FrontendController::class, 'serviceByTitle'])->name('front.serviceByTitle');
+Route::get('/services/{slug}', [App\Http\Controllers\FrontendController::class, 'serviceBySlug'])->name('front.serviceBySlug');
 Route::get('/faqs', [App\Http\Controllers\FrontendController::class, 'faqs'])->name('front.faqs');
 
 Auth::routes();

@@ -36,7 +36,7 @@
                                             <?php
                                                 $slug = Illuminate\Support\Str::slug($service->title);
                                             ?>
-                                            <a href="{{ route('front.serviceByTitle',$slug) }}" class="more">Get Details</a>
+                                            <a href="{{ route('front.serviceBySlug',$slug) }}" class="more">Get Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -45,10 +45,6 @@
                     </div> <!-- end services-grids -->
                 </div> <!-- end col -->
             </div> <!-- end row -->
-
-            <div class="all-services">
-                <a href="#" class="theme-btn">Load More</a>
-            </div>
         </div> <!-- end container -->
     </section>
     <!-- end of services -->
