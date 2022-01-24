@@ -3,53 +3,24 @@
     <!-- start of hero -->
     <section class="hero hero-slider-wrapper">
         <div class="hero-slider hero-slider-style-1">
-            <div class="slide">
-                <img src="{{ asset('frontend/images/slider/slide-1.jpg') }}" alt class="slider-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
+            @foreach($SliderBanners as $banner)
+                <div class="slide">
+                    <img src="{{ asset('uploads/banners/'.$banner->image) }}" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-8 col-sm-9 slide-caption">
+                                @if(!is_null($banner->description))
+                                   <p>{{ strip_tags($banner->description) }}</p>
+                                @endif
+                                <div class="btns">
+                                    <a href="#" class="theme-btn">About us</a>
+                                    <a href="#" class="theme-btn-s2">Explore</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="slide">
-                <img src="{{ asset('frontend/images/slider/slide-2.jpg') }}" alt class="slider-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="{{ asset('frontend/images/slider/slide-3.jpg') }}" alt class="slider-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <!-- end of hero slider -->
@@ -65,11 +36,11 @@
                     </div>
                 </div>
                 <div class="col col-lg-6 col-md-5">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p></p>
                 </div>
                 <div class="col col-lg-3 col-md-3">
                     <div class="all-service-link">
-                        <a href="services.html" class="theme-btn">All services</a>
+                        <a href="{{ route('front.services') }}" class="theme-btn">All services</a>
                     </div>
                 </div>
             </div> <!-- end row -->
@@ -77,62 +48,22 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="services-grids service-slider dots-s1">
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="{{ asset('frontend/images/services/img-1.jpg') }}" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Mechanical Works</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
+                        @foreach($Services as $service)
+                            <div class="grid">
+                                <div class="inner mk-bg-img">
+                                    <div class="details ">
+                                        <div class="info">
+                                            <img src="{{ asset('uploads/services/'.$service->image) }}" alt class="bg-image">
+                                            <a href="service-single.html">
+                                                <h3><i class="fi flaticon-construction"></i> {{ $service->title }}</h3>
+                                            </a>
+                                            <p>{{ strip_tags($service->description) }}</p>
+                                            <a href="service-single.html" class="more">Get Details</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="{{ asset('frontend/images/services/img-2.jpg') }}" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Power &amp; Energy</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="{{ asset('frontend/images/services/img-3.jpg') }}" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Petroleum Refinery</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="{{ asset('frontend/images/services/img-1.jpg') }}" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Mechanical Works</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div> <!-- end services-grids -->
                 </div> <!-- end col -->
             </div> <!-- end row -->
@@ -147,38 +78,24 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="testimonials-slider slider-arrow-s1">
-                        <div class="slide-item">
-                            <div class="inner">
-                                <div class="client-quote">
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                                <div class="client-details">
-                                    <div class="client-pic">
-                                        <img src="{{ asset('frontend/images/testimonials/client.jpg') }}" alt="">
+                        @foreach($Testimonials as $Testimonial)
+                            <div class="slide-item">
+                                <div class="inner">
+                                    <div class="client-quote">
+                                        <p>{{ strip_tags($Testimonial->description) }}</p>
                                     </div>
-                                    <div class="client-info">
-                                        <h4>Danny Boyles</h4>
-                                        <span>Director of Boards, Machinima</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="inner">
-                                <div class="client-quote">
-                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                                <div class="client-details">
-                                    <div class="client-pic">
-                                        <img src="{{ asset('frontend/images/testimonials/client.jpg') }}" alt="">
-                                    </div>
-                                    <div class="client-info">
-                                        <h4>Danny Boyles</h4>
-                                        <span>Director of Boards, Machinima</span>
+                                    <div class="client-details">
+                                        <div class="client-pic">
+                                            <img src="{{ asset('uploads/testimonials/'.$Testimonial->image) }}" alt="">
+                                        </div>
+                                        <div class="client-info">
+                                            <h4>{{ $Testimonial->name }}</h4>
+                                            <span>{{ $Testimonial->designation }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -409,40 +326,25 @@
                             <h2>All these years, our different services have delivered long lasting innovation</h2>
                         </div>
                         <div class="details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p></p>
                             <div class="panel-group faq-accordion theme-accordion-s1" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">Ipsam voluptatem quia voluptas sit</a>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                @foreach($Faqs->slice(0,3) as $count =>$faq)
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <a @if($count !== 0) class="collapsed" @endif data-toggle="collapse" data-parent="#accordion" href="#{{$faq->id}}" aria-expanded="true">{{ $faq->name }}</a>
+                                        </div>
+                                        <div id="{{$faq->id}}" class="panel-collapse collapse @if($count == 0) in @endif">
+                                            <div class="panel-body">
+                                                <p>{{ $faq->description }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ted quia non numquam eius modi</a>
+                                @endforeach
+                                @if(count($Faqs) > 4)
+                                    <div class="all-news-link">
+                                        <a href="{{ route('front.faqs') }}" class="theme-btn">More Faqs</a>
                                     </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Tempora incidunt ut labore</a>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -463,21 +365,11 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="partners-slider">
+                        @foreach($Partners as $Partner)
                         <div class="grid">
-                            <img src="{{ asset('frontend/images/partners/img-1.png') }}" alt="">
+                            <img src="{{ asset('uploads/partners/'.$Partner->image) }}" alt="">
                         </div>
-                        <div class="grid">
-                            <img src="{{ asset('frontend/images/partners/img-2.png') }}" alt="">
-                        </div>
-                        <div class="grid">
-                            <img src="{{ asset('frontend/images/partners/img-3.png') }}" alt="">
-                        </div>
-                        <div class="grid">
-                            <img src="{{ asset('frontend/images/partners/img-4.png') }}" alt="">
-                        </div>
-                        <div class="grid">
-                            <img src="{{ asset('frontend/images/partners/img-2.png') }}" alt="">
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div> <!-- end row -->

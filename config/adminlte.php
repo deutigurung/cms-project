@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'CMS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>CMS</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -243,7 +243,7 @@ return [
         ],
         [
             'text'        => 'pages',
-            'url'         => 'pages',
+            'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
         ],
         ['header' => 'account_settings'],
@@ -263,11 +263,11 @@ return [
             'submenu' => [
                 [
                     'text' => 'Services',
-                    'url'  => 'services',
+                    'url'  => 'admin/services',
                 ],
                 [
                     'text' => 'Teams',
-                    'url'  => 'teams',
+                    'url'  => 'admin/teams',
                 ],
                 [
                     'text'    => 'Blogs',
@@ -275,25 +275,25 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Blog Category',
-                            'url'  => 'blogCategory',
+                            'url'  => 'admin/blogCategory',
                         ],
                         [
                             'text'    => 'Blog',
-                            'url'     => 'blogs',
+                            'url'     => 'admin/blogs',
                         ],
                     ],
                 ],
                 [
                     'text' => 'Partners',
-                    'url'  => 'partners',
+                    'url'  => 'admin/partners',
                 ],
                 [
                     'text' => 'Social Link',
-                    'url'  => 'social-links',
+                    'url'  => 'admin/social-links',
                 ],
                 [
                     'text' => 'Testimonials',
-                    'url'  => 'testimonials',
+                    'url'  => 'admin/testimonials',
                 ],
                 [
                     'text'    => 'Gallery',
@@ -301,21 +301,21 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Gallery',
-                            'url'  => 'galleries',
+                            'url'  => 'admin/galleries',
                         ],
                         [
                             'text'    => 'Gallery Images',
-                            'url'     => 'images',
+                            'url'     => 'admin/images',
                         ],
                     ],
                 ],
                 [
                     'text' => 'Banners',
-                    'url'  => 'banners',
+                    'url'  => 'admin/banners',
                 ],
                 [
                     'text' => 'FAQs',
-                    'url'  => 'faqs',
+                    'url'  => 'admin/faqs',
                 ],
             ],
         ],
@@ -323,7 +323,7 @@ return [
         [
             'text'       => 'General',
             'icon_color' => 'red',
-            'url'        => 'settings',
+            'url'        => 'admin/settings',
         ],
         [
             'text'       => 'Website',
