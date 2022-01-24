@@ -17,6 +17,9 @@ Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name
 Route::get('/services', [App\Http\Controllers\FrontendController::class, 'services'])->name('front.services');
 Route::get('/services/{slug}', [App\Http\Controllers\FrontendController::class, 'serviceBySlug'])->name('front.serviceBySlug');
 Route::get('/faqs', [App\Http\Controllers\FrontendController::class, 'faqs'])->name('front.faqs');
+Route::get('/blogs', [App\Http\Controllers\FrontendController::class, 'blogs'])->name('front.blogs');
+Route::get('/blogs/{slug}', [App\Http\Controllers\FrontendController::class, 'blogBySlug'])->name('front.blogBySlug');
+
 
 Auth::routes();
 

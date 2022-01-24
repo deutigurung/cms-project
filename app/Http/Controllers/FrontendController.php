@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Faq;
 use App\Models\Partners;
 use App\Models\QueryForm;
@@ -19,8 +21,9 @@ class FrontendController extends Controller
         $Testimonials = Testimonial::where('status', 1)->get();
         $Partners = Partners::all();
         $Faqs = Faq::latest()->get();
+        $Blogs = Blog::where('status', 1)->latest()->get();
         return view('frontend.index',compact('SliderBanners','Services',
-            'Testimonials','Partners','Faqs'));
+            'Testimonials','Partners','Faqs','Blogs'));
     }
     public function faqs()
     {
@@ -37,6 +40,19 @@ class FrontendController extends Controller
         $ServiceAll = Service::where('status', 1)->latest()->get();
         $Service = Service::where('slug',$slug)->where('status', 1)->first();
         return view('frontend.services.service-single',compact('Service','ServiceAll'));
+    }
+    public function blogs()
+    {
+        $Blogs = Blog::where('status', 1)->latest()->get();
+        $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
+        return view('frontend.blogs.blog',compact('Blogs','BlogCategories'));
+    }
+    public function blogBySlug($slug)
+    {
+        $BlogAll = Blog::where('status', 1)->latest()->get();
+        $Blog = Blog::where('slug',$slug)->where('status', 1)->first();
+        $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
+        return view('frontend.blogs.blog-detail',compact('Blog','BlogAll','BlogCategories'));
     }
     public function queryForm(Request $request){
         $validatedData = $request->validate([
