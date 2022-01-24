@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -45,6 +46,7 @@ class ServiceController extends Controller
         //dd($request->all());
         $service = Service::create([
             'title'      => $request->get('title'),
+            'slug'      => Str::slug($request->get('title')),
             'description'      => $request->get('description'),
             'status'      => 1,
         ]);
@@ -100,6 +102,7 @@ class ServiceController extends Controller
         $service = Service::find($id);
         $service->update([
             'title'      => $request->get('title'),
+            'slug'      => Str::slug($request->get('title')),
             'description'      => $request->get('description'),
             'status'      => $request->get('status'),
         ]);
