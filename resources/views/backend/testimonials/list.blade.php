@@ -45,7 +45,7 @@
                                     </td>
                                     <td>{{$testimonial->name}}</td>
                                     <td>{{$testimonial->designation}}</td>
-                                    <td>{{$testimonial->description}}</td>
+                                    <td>{{strip_tags($testimonial->description)}}</td>
                                     <td>{{ ($testimonial->status == 1) ? 'Active' : 'Inactive' }}</td>
                                     <td>
                                         <form method="POST" action="{{ route('testimonials.destroy',$testimonial->id) }}" class="confirmation">
