@@ -94,50 +94,23 @@
                 <div id="navbar" class="navbar-collapse collapse navigation-holder">
                     <button class="close-navbar"><i class="fa fa-close"></i></button>
                     <ul class="nav navbar-nav">
-                        <li class="menu-item-has-children">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="index-2.html">Home Style 1</a></li>
-                                <li><a href="index-3.html">Home Style 2</a></li>
-                                <li><a href="index-4.html">Home Style 3</a></li>
-                                <li><a href="index-5.html">Home Style 4</a></li>
-                                <li><a href="index-6.html">Home Style 5</a></li>
-                                <li><a href="index-7.html">Home Style 6</a></li>
+                        <?php
+                        $menus = @Helper::menusList();
+                        ?>
+                        @foreach($menus as $menu)
+                            @if(count($menu->childs) == 0)
+                                <li><a href="{{ url('/'.$menu->url) }}"> {{ $menu->title }}</a></li>
+                            @else
                                 <li class="menu-item-has-children">
-                                    <a href="#Level3">Thidr level</a>
+                                    <a href="#">{{ $menu->title }}</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Level3</a></li>
-                                        <li><a href="#">Level3</a></li>
-                                        <li><a href="#">Level3</a></li>
+                                        @foreach($menu->childs as $child)
+                                            <li><a href="{{ url('/'.$child->url) }}">{{ $child->title }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="service-single.html">Service single</a></li>
-                                <li><a href="project-single.html">Project single</a></li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
-                                <li><a href="shop-details.html">Shop single</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html">Blog grid</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                <li><a href="blog-details.html">Blog single</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                            @endif
+                        @endforeach
                     </ul>
                 </div><!-- end of nav-collapse -->
             </div><!-- end of container -->

@@ -326,9 +326,9 @@ return [
             'url'        => 'admin/settings',
         ],
         [
-            'text'       => 'Website',
+            'text'       => 'Menu',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => 'admin/menus',
         ],
     ],
 
