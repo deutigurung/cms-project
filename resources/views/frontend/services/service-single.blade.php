@@ -30,7 +30,7 @@
                             <h3>{{ $Service->title }}</h3>
                         </div>
                         <div class="details">
-                            {{ $Service->description }}
+                            {!! $Service->description !!}
                         </div>
                     </div> <!-- end service content -->
                 </div> <!-- end col -->

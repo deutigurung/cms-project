@@ -35,7 +35,7 @@
                             </ul>
                         </div>
                         <div class="post-body">
-                            {{ strip_tags($Blog->content) }}
+                            {!! $Blog->content !!}
                         </div>
                     </div> <!-- end post -->
 

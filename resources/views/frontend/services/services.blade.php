@@ -29,14 +29,11 @@
                                     <div class="details ">
                                         <div class="info">
                                             <img src="{{ asset('uploads/services/'.$service->image) }}" alt class="bg-image">
-                                            <a href="service-single.html">
+                                            <a href="{{ route('front.serviceBySlug',$service->slug) }}">
                                                 <h3><i class="fi flaticon-construction"></i> {{ $service->title }}</h3>
                                             </a>
-                                            <p>{{ strip_tags($service->description) }}</p>
-                                            <?php
-                                                $slug = Illuminate\Support\Str::slug($service->title);
-                                            ?>
-                                            <a href="{{ route('front.serviceBySlug',$slug) }}" class="more">Get Details</a>
+                                            <p>{{ substr(strip_tags($service->description),0,50) }}...</p>
+                                            <a href="{{ route('front.serviceBySlug',$service->slug) }}" class="more">Get Details</a>
                                         </div>
                                     </div>
                                 </div>
