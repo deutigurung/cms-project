@@ -30,6 +30,11 @@ class FrontendController extends Controller
         $Faqs = Faq::latest()->get();
         return view('frontend.faqs',compact('Faqs'));
     }
+    public function testimonials()
+    {
+        $Testimonials = Testimonial::latest()->get();
+        return view('frontend.testimonials',compact('Testimonials'));
+    }
     public function services()
     {
         $Services = Service::where('status', 1)->latest()->get();
