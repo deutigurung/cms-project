@@ -25,7 +25,7 @@
     </div>
 
     <div class="form-group row">
-        <label for="style_preload" class="col-sm-2 col-form-label">Site Favicon</label>
+        <label for="style_preload" class="col-sm-2 col-form-label">Site Preloader</label>
         <div class="col-sm-10">
             <input type="file" class="form-control" name="style_preload">
             @if(isset($setting->style_preload))

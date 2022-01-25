@@ -25,7 +25,6 @@
     </section>
     <!-- end of hero slider -->
 
-
     <!-- start of services -->
     <section class="section-padding">
         <div class="container">
@@ -71,7 +70,6 @@
     </section>
     <!-- end of services -->
 
-
     <!-- start testimonials -->
     <section class="testimonials section-padding parallax" data-bg-image="{{ asset('frontend/images/testimonials/bg.jpg') }}">
         <div class="container">
@@ -102,7 +100,6 @@
         </div>
     </section>
     <!-- end testimonials -->
-
 
     <!-- start offer -->
     <section class="section-padding">
@@ -166,7 +163,6 @@
         </div> <!-- end container -->
     </section>
     <!-- end offer -->
-
 
     <!-- recent-project -->
     <section class="recent-projects section-padding">
@@ -289,7 +285,6 @@
     </section>
     <!-- end recent-project -->
 
-
     <!-- start about-us-faq -->
     <section class="section-padding about-us-faq">
         <div class="container">
@@ -357,7 +352,6 @@
     </section>
     <!-- end start about-us-faq -->
 
-
     <!-- start partners -->
     <section class="section-padding partners">
         <h2 class="hidden">Partners</h2>
@@ -377,7 +371,6 @@
     </section>
     <!-- end partners -->
 
-
     <!-- start contact-section -->
     <section class="contact-section section-padding parallax" data-bg-image="{{ asset('frontend/images/contact-section-bg.jpg') }}">
         <div class="container">
@@ -390,9 +383,11 @@
                         <div class="details">
                             <p>For any kind of query, contact us with the details below.</p>
                             <ul>
-                                <li><i class="fa fa-phone"></i> +123 (569) 254 78</li>
-                                <li><i class="fa fa-envelope"></i> info@industrial.com</li>
-                                <li><i class="fa fa-home"></i> #59, East Madison Ave, Melbourne Australia</li>
+                                <li><i class="fa fa-phone"></i> {{ @Helper::GeneralSiteSettings("contact_landline") }} /
+                                    {{ @Helper::GeneralSiteSettings("contact_mobile") }}
+                                </li>
+                                <li><i class="fa fa-envelope"></i> {{ @Helper::GeneralSiteSettings("contact_email") }}</li>
+                                <li><i class="fa fa-home"></i> {{ @Helper::GeneralSiteSettings("contact_address") }}</li>
                             </ul>
                         </div>
                     </div>
@@ -447,7 +442,6 @@
         </div>
     </section>
     <!-- end contact-section -->
-
 
     <!-- news-section -->
     <section class="section-padding">

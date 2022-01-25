@@ -4,7 +4,7 @@
     <!-- start preloader -->
     <div class="preloader">
         <div class="preloader-inner">
-            <img src="{{ asset('frontend/images/preloader.gif') }}" alt>
+            <img src="{{ asset('uploads/settings/'.@Helper::GeneralSiteSettings("style_preload")) }}" alt>
         </div>
     </div>
     <!-- end preloader -->
@@ -20,13 +20,13 @@
                                 <div>
                                     <i class="fa fa-location-arrow"></i>
                                     <div class="details">
-                                        <p>5523 Research Park Drive, Suite 110</p>
+                                        <p>{{ @Helper::GeneralSiteSettings("contact_address") }}</p>
                                     </div>
                                 </div>
                                 <div>
                                     <i class="fa fa-phone"></i>
                                     <div class="details">
-                                        <p>+012 (3546) 547</p>
+                                        <p>{{ @Helper::GeneralSiteSettings("contact_landline") }} / {{ @Helper::GeneralSiteSettings("contact_mobile") }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,11 +36,11 @@
                         <div class="social">
                             <span>Follow: </span>
                             <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="{{ @Helper::GeneralSiteSettings("fb_link") }}"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="{{ @Helper::GeneralSiteSettings("twitter_link") }}"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{{ @Helper::GeneralSiteSettings("linkedin_link") }}"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="{{ @Helper::GeneralSiteSettings("youtube_link") }}"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a href="{{ @Helper::GeneralSiteSettings("google_link") }}"><i class="fa fa-google"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -53,7 +53,9 @@
                 <div class="row">
                     <div class="col col-sm-3">
                         <div class="site-logo">
-                            <a href="index-2.html"><img src="{{ asset('frontend/images/logo-2.png') }}" alt></a>
+                            <a href="{{ route('front.home') }}">
+                                <img src="{{ asset('uploads/settings/'.@Helper::GeneralSiteSettings("style_logo")) }}" alt>
+                            </a>
                         </div>
                     </div>
                     <div class="col col-sm-9">

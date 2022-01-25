@@ -5,11 +5,14 @@
             <div class="row">
                 <div class="col col-md-3 col-sm-6">
                     <div class="widget about-widget">
-                        <div class="footer-logo"><img src="{{ asset('frontend/images/logo.png') }}" alt></div>
+                        <div class="footer-logo">
+                            <img src="{{ asset('uploads/settings/'.@Helper::GeneralSiteSettings("style_logo")) }}" alt>
+                        </div>
                         <ul class="contact-info">
-                            <li><i class="fa fa-home"></i> 555 Main St, Salt Lake City, UT 84101</li>
-                            <li><i class="fa fa-phone"></i> +1-(547)-257</li>
-                            <li><i class="fa fa-home"></i> Working Hours: <br>Mon-Fri (9 am - 8 pm)</li>
+                            <li><i class="fa fa-home"></i> {{ @Helper::GeneralSiteSettings("contact_address") }}</li>
+                            <li><i class="fa fa-phone"></i> {{ @Helper::GeneralSiteSettings("contact_landline") }} /
+                                {{ @Helper::GeneralSiteSettings("contact_mobile") }}</li>
+                            <li><i class="fa fa-clock-o"></i> Working Hours: <br>{{ @Helper::GeneralSiteSettings("contact_hours") }}</li>
                         </ul>
                     </div>
                 </div>
@@ -17,12 +20,13 @@
                 <div class="col col-md-3 col-sm-6">
                     <div class="widget service-links-widget">
                         <h3>Services</h3>
+                        <?php
+                        $services = @Helper::ServicesList();
+                        ?>
                         <ul>
-                            <li><a href="#">Agriculture Processing</a></li>
-                            <li><a href="#">Chemical Research</a></li>
-                            <li><a href="#">Metal Engineering</a></li>
-                            <li><a href="#">Mechanical Engineering</a></li>
-                            <li><a href="#">Petroleum &amp; Gas</a></li>
+                            @foreach($services as $service)
+                            <li><a href="{{ route('front.serviceBySlug',$service->slug) }}">{{ $service->title }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
