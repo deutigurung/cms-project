@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\GalleryImageController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialLinkController;
@@ -30,6 +31,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/pages', PageController::class);
     Route::resource('/faqs', FaqController::class);
     Route::resource('/menus', MenuController::class);
+    Route::resource('/projects', ProjectController::class);
 
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings');
     Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');

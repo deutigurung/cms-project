@@ -262,6 +262,10 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
+                    'text' => 'Project',
+                    'url'  => 'admin/projects',
+                ],
+                [
                     'text' => 'Services',
                     'url'  => 'admin/services',
                 ],
