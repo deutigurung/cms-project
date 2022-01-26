@@ -12,6 +12,11 @@ class Project extends Model
     protected $table = 'projects';
 
     protected $fillable =  [
-        'title','description','image','service_id','status','date','client','website'
+        'title','slug','description','image','service_id','status','date','client','website'
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class,'service_id');
+    }
 }

@@ -18,6 +18,8 @@ Route::get('/services', [App\Http\Controllers\FrontendController::class, 'servic
 Route::get('/services/{slug}', [App\Http\Controllers\FrontendController::class, 'serviceBySlug'])->name('front.serviceBySlug');
 Route::get('/faqs', [App\Http\Controllers\FrontendController::class, 'faqs'])->name('front.faqs');
 Route::get('/testimonials', [App\Http\Controllers\FrontendController::class, 'testimonials'])->name('front.testimonials');
+Route::get('/projects', [App\Http\Controllers\FrontendController::class, 'projects'])->name('front.projects');
+Route::get('/projects/{slug}', [App\Http\Controllers\FrontendController::class, 'projectBySlug'])->name('front.projectBySlug');
 Route::get('/blogs', [App\Http\Controllers\FrontendController::class, 'blogs'])->name('front.blogs');
 Route::get('/blogs/{slug}', [App\Http\Controllers\FrontendController::class, 'blogBySlug'])->name('front.blogBySlug');
 Route::get('/about-us', [App\Http\Controllers\FrontendController::class, 'about'])->name('front.about');

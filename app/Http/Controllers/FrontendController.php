@@ -8,6 +8,7 @@ use App\Models\BlogCategory;
 use App\Models\Faq;
 use App\Models\Page;
 use App\Models\Partners;
+use App\Models\Project;
 use App\Models\QueryForm;
 use App\Models\Service;
 use App\Models\TeamMember;
@@ -60,6 +61,16 @@ class FrontendController extends Controller
         $Blog = Blog::where('slug',$slug)->where('status', 1)->first();
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
         return view('frontend.blogs.blog-detail',compact('Blog','BlogAll','BlogCategories'));
+    }
+    public function projects()
+    {
+        $Projects = Project::where('status', 1)->latest()->get();
+        return view('frontend.projects.projects',compact('Projects'));
+    }
+    public function projectBySlug($slug)
+    {
+        $Project = Project::where('slug',$slug)->where('status', 1)->first();
+        return view('frontend.projects.project-single',compact('Project'));
     }
     public function about()
     {

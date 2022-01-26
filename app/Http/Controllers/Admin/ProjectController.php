@@ -47,10 +47,11 @@ class ProjectController extends Controller
             'client' => 'nullable|string',
             'description' => 'nullable|string',
             'service_id' => 'required',
-            'image'           => 'nullable|mimes:jpg,jpeg,png|max:2060',
+            'image'           => 'required|mimes:jpg,jpeg,png|max:2060',
         ]);
         $project = Project::create([
             'title'      => $request->get('title'),
+            'slug'      => Str::slug($request->get('title')),
             'client'      => $request->get('client'),
             'date'      => $request->get('date'),
             'website'      => $request->get('website'),
@@ -114,6 +115,7 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $project->update([
             'title'      => $request->get('title'),
+            'slug'      => Str::slug($request->get('title')),
             'client'      => $request->get('client'),
             'date'      => $request->get('date'),
             'website'      => $request->get('website'),
