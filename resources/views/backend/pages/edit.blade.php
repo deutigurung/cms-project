@@ -45,11 +45,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="expire_date">Expire Date</label>
-                            <input id="expire_date" type="date" class="form-control{{ $errors->has('expire_date') ? ' is-invalid' : '' }}" name="expire_date" value="{{ $page->expire_date }}" autofocus>
-                            @if ($errors->has('expire_date'))
+                            <label for="quote">Quote</label>
+                            <input id="quote" type="text" class="form-control{{ $errors->has('quote') ? ' is-invalid' : '' }}" name="quote" value="{{ $page->quote }}" autofocus>
+                            @if ($errors->has('quote'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('expire_date') }}</strong>
+                                    <strong>{{ $errors->first('quote') }}</strong>
                                 </span>
                             @endif
                         </div>

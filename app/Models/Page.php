@@ -12,6 +12,6 @@ class Page extends Model
     protected $table = 'pages';
 
     protected $fillable =  [
-        'title','url','description','date','expire_date','image','attach_file','status'
+        'title','url','description','date','quote','image','attach_file','status'
     ];
 }

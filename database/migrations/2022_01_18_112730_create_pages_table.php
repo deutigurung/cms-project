@@ -19,7 +19,7 @@ class CreatePagesTable extends Migration
             $table->string('url')->nullable();
             $table->longText('description')->nullable();
             $table->date('date')->nullable();
-            $table->date('expire_date')->nullable();
+            $table->text('quote')->nullable();
             $table->string('image')->nullable();
             $table->string('attach_file')->nullable();
             $table->tinyInteger('status');

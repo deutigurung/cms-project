@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col col-md-5">
                     <div class="section-title-s3">
-                        <h2>Get full range of premium Industrial services for your business</h2>
+                        <h2>{{ $About->quote }}</h2>
                     </div>
                     <div class="offer-text">
                         {!! $About->description !!}
