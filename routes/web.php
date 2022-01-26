@@ -20,6 +20,9 @@ Route::get('/faqs', [App\Http\Controllers\FrontendController::class, 'faqs'])->n
 Route::get('/testimonials', [App\Http\Controllers\FrontendController::class, 'testimonials'])->name('front.testimonials');
 Route::get('/blogs', [App\Http\Controllers\FrontendController::class, 'blogs'])->name('front.blogs');
 Route::get('/blogs/{slug}', [App\Http\Controllers\FrontendController::class, 'blogBySlug'])->name('front.blogBySlug');
+Route::get('/about-us', [App\Http\Controllers\FrontendController::class, 'about'])->name('front.about');
+Route::get('/contact-us', [App\Http\Controllers\FrontendController::class, 'contact'])->name('front.contact');
+Route::post('/query-form', [App\Http\Controllers\FrontendController::class, 'queryForm'])->name('front.queryForm');
 
 
 Auth::routes();

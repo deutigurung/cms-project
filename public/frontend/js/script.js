@@ -631,12 +631,11 @@
     function map() {
 
         var locations = [
-            ['Hotel royal international khulna ', 22.8103888, 89.5619609,1],
-            ['City inn khulna', 22.820884, 89.551216,2],
+            ['Kathmandu,Nepal', 27.739297644604008, 85.40429496765137,1],
         ];
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng( 22.8103888, 89.5619609),
+            center: new google.maps.LatLng( 27.739297644604008, 85.40429496765137),
             zoom: 12,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -661,90 +660,6 @@
                 }
             })(marker, i));
         }
-
-        map.set('styles',
-
-            [
-                {
-                    "featureType": "administrative",
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "color": "#fdc900"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#f2f2f2"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "saturation": -100
-                        },
-                        {
-                            "lightness": 45
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "color": "#fdc900"
-                        },
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                }
-            ]
-        );
 
     };
 
@@ -819,6 +734,8 @@
 
                 phone: "required",
 
+                note: "required",
+
             },
 
             messages: {
@@ -826,12 +743,13 @@
                 l_name: "Please enter your Last name",
                 email: "Please enter your email",
                 phone: "Please enter your phone",
+                note: "Please provide us your message",
             },
 
             submitHandler: function (form) {
                 $.ajax({
                     type: "POST",
-                    url: "mail-2.php",
+                    url: "/query-form",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();

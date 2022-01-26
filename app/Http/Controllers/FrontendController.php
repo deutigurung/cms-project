@@ -6,9 +6,11 @@ use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Faq;
+use App\Models\Page;
 use App\Models\Partners;
 use App\Models\QueryForm;
 use App\Models\Service;
+use App\Models\TeamMember;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -59,22 +61,28 @@ class FrontendController extends Controller
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
         return view('frontend.blogs.blog-detail',compact('Blog','BlogAll','BlogCategories'));
     }
-    public function queryForm(Request $request){
-        $validatedData = $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'nullable|string',
-            'email' => 'nullable|string|email',
-            'phone' => 'nullable',
-            'message' => 'required',
-        ]);
+    public function about()
+    {
+        $About = Page::where('title','like','about%')->first();
+        $Teams = TeamMember::latest()->get();
+        $Partners = Partners::latest()->get();
+        return view('frontend.about',compact('About','Teams','Partners'));
+    }
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+    public function queryForm(Request $request)
+    {
         $query = QueryForm::create([
-            'first_name'      => $request->get('first_name'),
-            'last_name'      => $request->get('last_name'),
-            'message'      => $request->get('message'),
+            'first_name'      => $request->get('f_name'),
+            'last_name'      => $request->get('l_name'),
+            'message'      => $request->get('note'),
             'phone'      => $request->get('phone'),
             'email'      => $request->get('email'),
         ]);
-        return redirect()->back()->with('success', 'Your query has been submit Successfully');
-
+        return json_encode(array(
+            "statusCode"=>200
+        ));
     }
 }
