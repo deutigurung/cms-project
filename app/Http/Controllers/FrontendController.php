@@ -25,8 +25,9 @@ class FrontendController extends Controller
         $Partners = Partners::all();
         $Faqs = Faq::latest()->get();
         $Blogs = Blog::where('status', 1)->latest()->get();
+        $Projects = Project::where('status', 1)->latest()->get();
         return view('frontend.index',compact('SliderBanners','Services',
-            'Testimonials','Partners','Faqs','Blogs'));
+            'Testimonials','Partners','Faqs','Blogs','Projects'));
     }
     public function faqs()
     {
@@ -48,6 +49,11 @@ class FrontendController extends Controller
         $ServiceAll = Service::where('status', 1)->latest()->get();
         $Service = Service::where('slug',$slug)->where('status', 1)->first();
         return view('frontend.services.service-single',compact('Service','ServiceAll'));
+    }
+    public function pageByUrl($url)
+    {
+        $Pages = Page::where('url',$url)->where('status', 1)->first();
+        return view('frontend.pages',compact('Pages'));
     }
     public function blogs()
     {

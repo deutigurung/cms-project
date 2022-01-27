@@ -35,17 +35,12 @@
                     <div class="widget quick-links-widget">
                         <h3>Navigation</h3>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">News</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <?php
+                            $menus = @Helper::menusList();
+                            ?>
+                            @foreach($menus as $menu)
+                                <li><a href="{{ url('/'.$menu->url) }}">{{ $menu->title }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
