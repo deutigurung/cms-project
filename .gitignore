@@ -1,5 +1,4 @@
 /node_modules
-/public/frontend/images
 /public/storage
 /storage/*.key
 .env
@@ -13,5 +12,4 @@ yarn-error.log
 /.idea
 /.vscode
 /vendor
-/public/uploads
 cms-project.zip
