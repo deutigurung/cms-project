@@ -35,6 +35,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/projects', ProjectController::class);
     Route::resource('/users', UserController::class);
 
+    Route::get('/profile', [UserController::class, 'profile'])->name('users.profile');
+
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings');
     Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');
     Route::post('/settings-social', [SettingController::class, 'social'])->name('settings.social');
