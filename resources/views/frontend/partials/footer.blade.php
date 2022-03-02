@@ -3,7 +3,7 @@
     <div class="upper-footer">
         <div class="container">
             <div class="row">
-                <div class="col col-md-3 col-sm-6">
+                <div class="col col-md-4 col-sm-6">
                     <div class="widget about-widget">
                         <div class="footer-logo">
                             <img src="{{ asset('uploads/settings/'.@Helper::GeneralSiteSettings("style_logo")) }}" alt>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 col-sm-6">
+                <div class="col col-md-4 col-sm-6">
                     <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <?php
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 col-sm-6">
+                <div class="col col-md-4 col-sm-6">
                     <div class="widget quick-links-widget">
                         <h3>Navigation</h3>
                         <ul>
@@ -45,37 +45,12 @@
                     </div>
                 </div>
 
-                <div class="col col-md-3 col-sm-6">
-                    <div class="widget twitter-feed-widget">
-                        <h3>Twitter Feed</h3>
-                        <ul>
-                            <li>
-                                <div class="text">
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Ed quia con sequuntur magni dolores.</p>
-                                </div>
-                                <div class="info-box">
-                                    <i class="fa fa-twitter"></i>
-                                    <strong><a href="#">@Mark Wahlberg</a></strong>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text">
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Ed quia con sequuntur magni dolores.</p>
-                                </div>
-                                <div class="info-box">
-                                    <i class="fa fa-twitter"></i>
-                                    <strong><a href="#">@Mark Wahlberg</a></strong>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div> <!-- end upper-footer -->
     <div class="copyright-info">
         <div class="container">
-            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+            <p><a target="_blank" href="https://www.cite.edu.np">&copy; {{ date('Y') }} All Right Reserved By CITE</a></p>
         </div>
     </div>
 </footer>
