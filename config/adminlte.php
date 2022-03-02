@@ -323,6 +323,12 @@ return [
                 ],
             ],
         ],
+        ['header' => 'User Management'],
+        [
+            'text' => 'Users',
+            'url'  => 'admin/users',
+            'icon' => 'fas fa-fw fa-users',
+        ],
         ['header' => 'Configuration'],
         [
             'text'       => 'General',

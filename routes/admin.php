@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
@@ -32,6 +33,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/faqs', FaqController::class);
     Route::resource('/menus', MenuController::class);
     Route::resource('/projects', ProjectController::class);
+    Route::resource('/users', UserController::class);
 
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings');
     Route::post('/settings', [SettingController::class, 'store'])->name('settings.store');
