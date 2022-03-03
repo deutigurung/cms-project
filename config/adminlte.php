@@ -245,6 +245,7 @@ return [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
+            'can'         => 'systemuser',
         ],
         ['header' => 'account_settings'],
         [
@@ -255,6 +256,7 @@ return [
         [
             'text'    => 'Modules',
             'icon'    => 'fas fa-fw fa-share',
+            'can'    => 'systemuser',
             'submenu' => [
                 [
                     'text' => 'Project',
@@ -269,18 +271,8 @@ return [
                     'url'  => 'admin/teams',
                 ],
                 [
-                    'text'    => 'Blogs',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Blog Category',
-                            'url'  => 'admin/blogCategory',
-                        ],
-                        [
-                            'text'    => 'Blog',
-                            'url'     => 'admin/blogs',
-                        ],
-                    ],
+                    'text'    => 'Blog',
+                    'url'     => 'admin/blogs',
                 ],
                 [
                     'text' => 'Partners',
@@ -323,17 +315,26 @@ return [
             'text' => 'Users',
             'url'  => 'admin/users',
             'icon' => 'fas fa-fw fa-users',
+            'can'       => 'admin',
         ],
         ['header' => 'Configuration'],
         [
             'text'       => 'General',
             'icon_color' => 'red',
             'url'        => 'admin/settings',
+            'can'       => 'admin',
+        ],
+        [
+            'text' => 'Blog Category',
+            'icon_color' => 'red',
+            'url'  => 'admin/blogCategory',
+            'can'       => 'admin',
         ],
         [
             'text'       => 'Menu',
             'icon_color' => 'red',
             'url'        => 'admin/menus',
+            'can'       => 'admin',
         ],
     ],
 

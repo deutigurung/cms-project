@@ -49,6 +49,7 @@
                                 </div>
                             </div>
 
+                            @if($user->roles == "admin")
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="roles">Roles</label>
@@ -59,6 +60,7 @@
                                     </select>
                                 </div>
                             </div>
+                            @endif
 
                             <div class="col-sm-6">
                                 <div class="form-group">
