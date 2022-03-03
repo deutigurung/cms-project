@@ -247,6 +247,13 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'can'         => 'systemuser',
         ],
+        ['header' => 'Query Form'],
+        [
+            'text' => 'Query',
+            'url'  => 'admin/queries',
+            'icon' => 'fas fa-fw fa-questions',
+            'can'         => 'systemuser',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',

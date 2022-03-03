@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\QueryController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialLinkController;
@@ -42,4 +43,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/settings-social', [SettingController::class, 'social'])->name('settings.social');
     Route::post('/settings-contact', [SettingController::class, 'contact'])->name('settings.contact');
     Route::post('/settings-style', [SettingController::class, 'style'])->name('settings.style');
+
+    Route::get('/queries', [QueryController::class, 'index'])->name('queries.index');
 });

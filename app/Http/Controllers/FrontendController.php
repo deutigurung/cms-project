@@ -91,10 +91,15 @@ class FrontendController extends Controller
     }
     public function queryForm(Request $request)
     {
+        if($request->get('service') !== null ){
+            $msg = 'We are requesting for service - '.$request->get('service');
+        }else{
+            $msg = $request->get('note');
+        }
         $query = QueryForm::create([
             'first_name'      => $request->get('f_name'),
             'last_name'      => $request->get('l_name'),
-            'message'      => $request->get('note'),
+            'message'      => $msg,
             'phone'      => $request->get('phone'),
             'email'      => $request->get('email'),
         ]);

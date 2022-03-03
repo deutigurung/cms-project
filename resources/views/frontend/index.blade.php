@@ -309,15 +309,20 @@
 
                 <div class="col col-lg-6 col-lg-offset-1 col-md-7">
                     <div class="section-title-white">
-                        <h2>Request a quote</h2>
+                        <h2>Request a service</h2>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua.</p>
+                    <p></p>
 
                     <div class="contact-form-s1 form">
-                        <form method="post" id="contact-form" class="wpcf7-form contact-validation-active">
+                        <form method="post" id="contact-form-s2" class="wpcf7-form contact-validation-active">
+                            <input type="hidden" name="_token" id="csrf" value="{{session()->token()}}">
                             <div>
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name">
+                                <label for="name">First Name</label>
+                                <input type="text" id="f_name" name="f_name">
+                            </div>
+                            <div>
+                                <label for="name">Last Name</label>
+                                <input type="text" id="l_name" name="l_name">
                             </div>
                             <div>
                                 <label for="email">Email</label>
@@ -325,25 +330,25 @@
                             </div>
                             <div>
                                 <label for="phone">Phone Number</label>
-                                <input type="text" id="phone" name="phone">
+                                <input type="number" id="phone" name="phone">
                             </div>
                             <div>
-                                <label>Business Type</label>
-                                <select name="select">
+                                <label>Service Type</label>
+                                <select name="service">
                                     <option selected disabled> -- Select One -- </option>
-                                    <option value="Select One">Select One</option>
-                                    <option value="Select Two">Select Two</option>
-                                    <option value="Select Three">Select Three</option>
+                                    @foreach($Services as $service)
+                                        <option value="{{ $service->title }}">{{ $service->title }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="submit-btn-wrap">
-                                <input value="Submit" class="theme-btn wpcf7-submit" type="submit">
+                                <button type="submit" class="theme-btn">Submit</button>
                                 <div id="loader">
                                     <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
                                 </div>
                             </div>
                             <div class="error-handling-messages">
-                                <div id="success">Thank you</div>
+                                <div id="success">Thank you for your request.</div>
                                 <div id="error"> Error occurred while sending email. Please try again later. </div>
                             </div>
                         </form>
