@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,15 @@ Route::get('/contact-us', [App\Http\Controllers\FrontendController::class, 'cont
 Route::post('/query-form', [App\Http\Controllers\FrontendController::class, 'queryForm'])->name('front.queryForm');
 
 Auth::routes();
+Route::group(['middleware' => ['auth']], function() {
+    /**
+     * Verification Routes
+     */
+    Route::get('/email/verify',[App\Http\Controllers\Auth\VerificationController::class, 'show'])->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}',[App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify')->middleware(['signed']);
+    Route::post('/email/resend',[App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.resend');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/{page_url}', [App\Http\Controllers\FrontendController::class, 'pageByUrl'])->name('front.pageByUrl');
+

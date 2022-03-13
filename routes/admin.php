@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GalleryImageController;
+use App\Http\Controllers\Admin\JsonController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -35,6 +36,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/menus', MenuController::class);
     Route::resource('/projects', ProjectController::class);
     Route::resource('/users', UserController::class);
+    Route::resource('/json', JsonController::class);
 
     Route::get('/profile', [UserController::class, 'profile'])->name('users.profile');
 
