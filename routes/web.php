@@ -27,6 +27,13 @@ Route::get('/about-us', [App\Http\Controllers\FrontendController::class, 'about'
 Route::get('/contact-us', [App\Http\Controllers\FrontendController::class, 'contact'])->name('front.contact');
 Route::post('/query-form', [App\Http\Controllers\FrontendController::class, 'queryForm'])->name('front.queryForm');
 
+<<<<<<< HEAD
+=======
+Route::get('/events', [App\Http\Controllers\FrontendController::class, 'events'])->name('front.events');
+Route::get('/events/{slug}', [App\Http\Controllers\FrontendController::class, 'eventBySlug'])->name('front.eventBySlug');
+
+
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     /**

@@ -14,8 +14,13 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'title' => 'CMS',
     'title_prefix' => '',
+=======
+    'title'         => 'CMS',
+    'title_prefix'  => '',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     'title_postfix' => '',
 
     /*
@@ -30,7 +35,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'use_ico_only' => false,
+=======
+    'use_ico_only'     => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     'use_full_favicon' => false,
 
     /*
@@ -45,12 +54,21 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'logo' => '<b>CMS</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'AdminLTE',
+=======
+    'logo'              => '<b>CMS</b>',
+    'logo_img'          => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img_class'    => 'brand-image img-circle elevation-3',
+    'logo_img_xl'       => null,
+    'logo_img_xl_class' => 'brand-image-xs',
+    'logo_img_alt'      => 'AdminLTE',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -64,12 +82,21 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'usermenu_enabled' => true,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
+=======
+    'usermenu_enabled'      => true,
+    'usermenu_header'       => false,
+    'usermenu_header_class' => 'bg-primary',
+    'usermenu_image'        => false,
+    'usermenu_desc'         => false,
+    'usermenu_profile_url'  => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -83,12 +110,21 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'layout_topnav' => null,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
+=======
+    'layout_topnav'        => null,
+    'layout_boxed'         => null,
+    'layout_fixed_sidebar' => null,
+    'layout_fixed_navbar'  => null,
+    'layout_fixed_footer'  => null,
+    'layout_dark_mode'     => null,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -102,12 +138,21 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'classes_auth_card' => 'card-outline card-primary',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-flat btn-primary',
+=======
+    'classes_auth_card'   => 'card-outline card-primary',
+    'classes_auth_header' => '',
+    'classes_auth_body'   => '',
+    'classes_auth_footer' => '',
+    'classes_auth_icon'   => '',
+    'classes_auth_btn'    => 'btn-flat btn-primary',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -121,6 +166,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'classes_body' => '',
     'classes_brand' => '',
     'classes_brand_text' => '',
@@ -131,6 +177,18 @@ return [
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
+=======
+    'classes_body'             => '',
+    'classes_brand'            => '',
+    'classes_brand_text'       => '',
+    'classes_content_wrapper'  => '',
+    'classes_content_header'   => '',
+    'classes_content'          => '',
+    'classes_sidebar'          => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar_nav'      => '',
+    'classes_topnav'           => 'navbar-white navbar-light',
+    'classes_topnav_nav'       => 'navbar-expand',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     'classes_topnav_container' => 'container',
 
     /*
@@ -145,6 +203,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'sidebar_mini' => 'lg',
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
@@ -154,6 +213,17 @@ return [
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
+=======
+    'sidebar_mini'                            => 'lg',
+    'sidebar_collapse'                        => false,
+    'sidebar_collapse_auto_size'              => false,
+    'sidebar_collapse_remember'               => false,
+    'sidebar_collapse_remember_no_transition' => true,
+    'sidebar_scrollbar_theme'                 => 'os-theme-light',
+    'sidebar_scrollbar_auto_hide'             => 'l',
+    'sidebar_nav_accordion'                   => true,
+    'sidebar_nav_animation_speed'             => 300,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -167,12 +237,21 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
+=======
+    'right_sidebar'                     => false,
+    'right_sidebar_icon'                => 'fas fa-cogs',
+    'right_sidebar_theme'               => 'dark',
+    'right_sidebar_slide'               => true,
+    'right_sidebar_push'                => true,
+    'right_sidebar_scrollbar_theme'     => 'os-theme-light',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
@@ -187,6 +266,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'use_route_url' => false,
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
@@ -195,6 +275,16 @@ return [
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     'profile_url' => false,
+=======
+    'use_route_url'      => false,
+    'dashboard_url'      => 'home',
+    'logout_url'         => 'logout',
+    'login_url'          => 'login',
+    'register_url'       => 'register',
+    'password_reset_url' => 'password/reset',
+    'password_email_url' => 'password/email',
+    'profile_url'        => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -208,9 +298,15 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'enabled_laravel_mix' => false,
     'laravel_mix_css_path' => 'css/app.css',
     'laravel_mix_js_path' => 'js/app.js',
+=======
+    'enabled_laravel_mix'  => false,
+    'laravel_mix_css_path' => 'css/app.css',
+    'laravel_mix_js_path'  => 'js/app.js',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     /*
     |--------------------------------------------------------------------------
@@ -242,17 +338,28 @@ return [
             'text' => 'search',
         ],
         [
+<<<<<<< HEAD
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'can'         => 'systemuser',
+=======
+            'text' => 'pages',
+            'url'  => 'admin/pages',
+            'icon' => 'far fa-fw fa-file',
+            'can'  => ['admin', 'systemuser'],
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
         ['header' => 'Query Form'],
         [
             'text' => 'Query',
             'url'  => 'admin/queries',
             'icon' => 'fas fa-fw fa-questions',
+<<<<<<< HEAD
             'can'         => 'systemuser',
+=======
+            'can'  => ['admin', 'systemuser'],
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
         ['header' => 'account_settings'],
         [
@@ -263,7 +370,11 @@ return [
         [
             'text'    => 'Modules',
             'icon'    => 'fas fa-fw fa-share',
+<<<<<<< HEAD
             'can'    => 'systemuser',
+=======
+            'can'     => ['admin', 'systemuser'],
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
             'submenu' => [
                 [
                     'text' => 'Project',
@@ -274,12 +385,21 @@ return [
                     'url'  => 'admin/services',
                 ],
                 [
+<<<<<<< HEAD
                     'text' => 'Teams',
                     'url'  => 'admin/teams',
                 ],
                 [
                     'text'    => 'Blog',
                     'url'     => 'admin/blogs',
+=======
+                    'text' => 'Blog',
+                    'url'  => 'admin/blogs',
+                ],
+                [
+                    'text' => 'Events',
+                    'url'  => 'admin/events',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                 ],
                 [
                     'text' => 'Partners',
@@ -302,8 +422,13 @@ return [
                             'url'  => 'admin/galleries',
                         ],
                         [
+<<<<<<< HEAD
                             'text'    => 'Gallery Images',
                             'url'     => 'admin/images',
+=======
+                            'text' => 'Gallery Images',
+                            'url'  => 'admin/images',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                         ],
                     ],
                 ],
@@ -322,13 +447,24 @@ return [
             'text' => 'Users',
             'url'  => 'admin/users',
             'icon' => 'fas fa-fw fa-users',
+<<<<<<< HEAD
             'can'       => 'admin',
+=======
+            'can'  => ['admin', 'systemuser'],
+        ],
+        ['header' => 'Contact Management'],
+        [
+            'text' => 'Contacts',
+            'icon' => 'fas fa-fw fa-user',
+            'url'  => 'admin/contacts',
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
         ['header' => 'Configuration'],
         [
             'text'       => 'General',
             'icon_color' => 'red',
             'url'        => 'admin/settings',
+<<<<<<< HEAD
             'can'       => 'admin',
         ],
         [
@@ -336,12 +472,25 @@ return [
             'icon_color' => 'red',
             'url'  => 'admin/blogCategory',
             'can'       => 'admin',
+=======
+            'can'        => ['admin', 'systemuser'],
+        ],
+        [
+            'text'       => 'Blog Category',
+            'icon_color' => 'red',
+            'url'        => 'admin/blogCategory',
+            'can'        => ['admin', 'systemuser'],
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
         [
             'text'       => 'Menu',
             'icon_color' => 'red',
             'url'        => 'admin/menus',
+<<<<<<< HEAD
             'can'       => 'admin',
+=======
+            'can'        => ['admin', 'systemuser'],
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
     ],
 
@@ -380,6 +529,7 @@ return [
     */
 
     'plugins' => [
+<<<<<<< HEAD
         'Datatables' => [
             'active' => true,
             'files' => [
@@ -396,10 +546,29 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
+=======
+        'Datatables'  => [
+            'active' => true,
+            'files'  => [
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+                    'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
+                ],
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+                    'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
+                ],
+                [
+                    'type'     => 'css',
+                    'asset'    => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                 ],
             ],
         ],
+<<<<<<< HEAD
         'Select2' => [
             'active' => false,
             'files' => [
@@ -411,30 +580,60 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
+=======
+        'Select2'     => [
+            'active' => false,
+            'files'  => [
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
+                ],
+                [
+                    'type'     => 'css',
+                    'asset'    => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
                 ],
             ],
         ],
+<<<<<<< HEAD
         'Chartjs' => [
             'active' => false,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
+=======
+        'Chartjs'     => [
+            'active' => false,
+            'files'  => [
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js',
                 ],
             ],
         ],
         'Sweetalert2' => [
             'active' => false,
+<<<<<<< HEAD
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
+=======
+            'files'  => [
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
                 ],
             ],
         ],
+<<<<<<< HEAD
         'Pace' => [
             'active' => false,
             'files' => [
@@ -446,6 +645,19 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
+=======
+        'Pace'        => [
+            'active' => false,
+            'files'  => [
+                [
+                    'type'     => 'css',
+                    'asset'    => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
+                ],
+                [
+                    'type'     => 'js',
+                    'asset'    => false,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
                 ],
             ],
@@ -467,6 +679,7 @@ return [
 
     'iframe' => [
         'default_tab' => [
+<<<<<<< HEAD
             'url' => null,
             'title' => null,
         ],
@@ -482,6 +695,23 @@ return [
             'loading_screen' => 1000,
             'auto_show_new_tab' => true,
             'use_navbar_items' => true,
+=======
+            'url'   => null,
+            'title' => null,
+        ],
+        'buttons'     => [
+            'close'           => true,
+            'close_all'       => true,
+            'close_all_other' => true,
+            'scroll_left'     => true,
+            'scroll_right'    => true,
+            'fullscreen'      => true,
+        ],
+        'options'     => [
+            'loading_screen'    => 1000,
+            'auto_show_new_tab' => true,
+            'use_navbar_items'  => true,
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ],
     ],
 

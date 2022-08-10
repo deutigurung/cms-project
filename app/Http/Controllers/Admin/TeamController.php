@@ -16,7 +16,11 @@ class TeamController extends Controller
     public function index()
     {
         $teams = TeamMember::all();
+<<<<<<< HEAD
         return view('backend.teams.list',compact('teams'));
+=======
+        return view('backend.teams.index',compact('teams'));
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     }
 
     /**
@@ -48,6 +52,12 @@ class TeamController extends Controller
             'title'      => $request->get('title'),
             'description'      => $request->get('description'),
             'designation'      => $request->get('designation'),
+<<<<<<< HEAD
+=======
+            'email'      => $request->get('email'),
+            'phone'      => $request->get('phone'),
+            'address'      => $request->get('address'),
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
             'status'      => 1,
         ]);
         if ($request->hasFile('photo')) {
@@ -58,7 +68,11 @@ class TeamController extends Controller
             $file->move($destination, $file_name);
             TeamMember::where('id', $team->id)->update(['photo' => $file_name ]);
         }
+<<<<<<< HEAD
         return redirect()->route('teams.index')->with('success', 'Team  Added Successfully');
+=======
+        return redirect()->route('contacts.index')->with('success', 'Contact  Added Successfully');
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     }
 
     /**
@@ -106,6 +120,12 @@ class TeamController extends Controller
             'description'      => $request->get('description'),
             'designation'      => $request->get('designation'),
             'status'      => $request->get('status'),
+<<<<<<< HEAD
+=======
+            'email'      => $request->get('email'),
+            'phone'      => $request->get('phone'),
+            'address'      => $request->get('address'),
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
         ]);
         if ($request->hasFile('photo')) {
             $file        = $request->file('photo');
@@ -115,7 +135,11 @@ class TeamController extends Controller
             $file->move($destination, $file_name);
             TeamMember::where('id', $team->id)->update(['photo' => $file_name]);
         }
+<<<<<<< HEAD
         return redirect()->route('teams.index')->with('success', 'Team Updated Successfully');
+=======
+        return redirect()->route('contacts.index')->with('success', 'Contact Updated Successfully');
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     }
 
     /**
@@ -128,6 +152,10 @@ class TeamController extends Controller
     {
         $team = TeamMember::find($id);
         $team->delete();
+<<<<<<< HEAD
         return redirect()->route('teams.index')->with('success', 'Team Deleted Successfully');
+=======
+        return redirect()->route('contacts.index')->with('success', 'Contact Deleted Successfully');
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     }
 }

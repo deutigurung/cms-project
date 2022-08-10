@@ -16,6 +16,10 @@ class TeamMember extends Model
         'description',
         'photo',
         'status',
+<<<<<<< HEAD
         'designation'
+=======
+        'designation','email','phone','address'
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     ];
 }

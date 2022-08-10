@@ -3,6 +3,10 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\Admin\EventController;
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GalleryImageController;
@@ -21,7 +25,11 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
+<<<<<<< HEAD
     Route::resource('/teams', TeamController::class);
+=======
+    Route::resource('/contacts', TeamController::class);
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
     Route::resource('/blogCategory', BlogCategoryController::class);
     Route::resource('/blogs', BlogController::class);
     Route::resource('/partners', PartnerController::class);
@@ -37,6 +45,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/projects', ProjectController::class);
     Route::resource('/users', UserController::class);
     Route::resource('/json', JsonController::class);
+<<<<<<< HEAD
+=======
+    Route::resource('/events', EventController::class);
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 
     Route::get('/profile', [UserController::class, 'profile'])->name('users.profile');
 
@@ -47,4 +59,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/settings-style', [SettingController::class, 'style'])->name('settings.style');
 
     Route::get('/queries', [QueryController::class, 'index'])->name('queries.index');
+<<<<<<< HEAD
+=======
+    Route::get('/notifications', [QueryController::class, 'notifications'])->name('queries.notifications');
+    Route::post('/notifications', [QueryController::class, 'markAsRead'])->name('queries.markAsRead');
+>>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
 });
