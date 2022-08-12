@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GalleryImageController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::resource('/teams', TeamController::class);
+    Route::resource('/contacts', TeamController::class);
     Route::resource('/blogCategory', BlogCategoryController::class);
     Route::resource('/blogs', BlogController::class);
     Route::resource('/partners', PartnerController::class);
@@ -37,6 +38,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('/projects', ProjectController::class);
     Route::resource('/users', UserController::class);
     Route::resource('/json', JsonController::class);
+    Route::resource('/events', EventController::class);
 
     Route::get('/profile', [UserController::class, 'profile'])->name('users.profile');
 
@@ -47,4 +49,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/settings-style', [SettingController::class, 'style'])->name('settings.style');
 
     Route::get('/queries', [QueryController::class, 'index'])->name('queries.index');
+    Route::get('/notifications', [QueryController::class, 'notifications'])->name('queries.notifications');
+    Route::post('/notifications', [QueryController::class, 'markAsRead'])->name('queries.markAsRead');
 });

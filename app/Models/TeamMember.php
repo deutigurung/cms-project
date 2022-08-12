@@ -16,6 +16,6 @@ class TeamMember extends Model
         'description',
         'photo',
         'status',
-        'designation'
+        'designation','email','phone','address'
     ];
 }

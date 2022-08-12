@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 @section('content_header')
-    <h1 class="m-0 text-dark">Edit Team</h1>
+    <h1 class="m-0 text-dark">Edit Contact</h1>
 @stop
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <form role="form" class="form" method="post" action="{{ route('teams.update',$team) }}" enctype="multipart/form-data">
+                <form role="form" class="form" method="post" action="{{ route('contacts.update',$team) }}" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('PUT') }}
                     <div class="card-body">
@@ -34,10 +34,38 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $team->email }}" placeholder="Enter Full Name" autofocus>
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ $team->address }}" placeholder="Enter Full Name" autofocus>
+                                    @if ($errors->has('address'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('address') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="description">Description</label>
                                     <textarea name="description" class="form-control">{{ $team->description }}</textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="phone">Contact Number</label>
+                                    <input type="number" name="phone" value="{{ $team->phone }}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -68,7 +96,7 @@
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="{{ route('teams.index') }}" class="btn btn-danger">Cancel</a>
+                        <a href="{{ route('contacts.index') }}" class="btn btn-danger">Cancel</a>
                     </div>
                 </form>
             </div>

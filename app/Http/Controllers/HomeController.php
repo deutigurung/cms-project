@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+        $notifications = Notification::where('mark_read',0)->get();
+        return view('backend.dashboard',compact('notifications'));
     }
 }
