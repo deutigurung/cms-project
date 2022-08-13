@@ -28,6 +28,7 @@
                             <th>Name</th>
                             <th>Category</th>
                             <th>Status</th>
+                            <th>Total Views</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -42,6 +43,7 @@
                                 <td>{{ $blog->title }}</td>
                                 <td>{{ $blog->blogCategory->name }}</td>
                                 <td>{{ $blog->status == 1 ? 'Active' : 'Inactive' }}</td>
+                                <td>{{ $blog->total_views }}</td>
                                 <td>
                                     <form method="POST" action="{{ route('blogs.destroy',$blog->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />

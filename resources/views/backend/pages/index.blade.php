@@ -28,6 +28,7 @@
                             <th>Name</th>
                             <th>Date</th>
                             <th>Status</th>
+                            <th>Total Views</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -42,6 +43,7 @@
                                 <td>{{ $page->title }}</td>
                                 <td>{{ $page->date }}</td>
                                 <td>{{ $page->status == 1 ? 'Active' : 'Inactive' }}</td>
+                                <td>{{ $page->total_views }}</td>
                                 <td>
                                     <form method="POST" action="{{ route('pages.destroy',$page->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />

@@ -1,10 +1,14 @@
 @extends('adminlte::page')
 @section('content_header')
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h1 class="m-0 text-dark">Edit Team</h1>
 =======
     <h1 class="m-0 text-dark">Edit Contact</h1>
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+    <h1 class="m-0 text-dark">Edit Contact</h1>
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 @stop
 
 @section('content')
@@ -12,10 +16,14 @@
         <div class="col-12">
             <div class="card">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <form role="form" class="form" method="post" action="{{ route('teams.update',$team) }}" enctype="multipart/form-data">
 =======
                 <form role="form" class="form" method="post" action="{{ route('contacts.update',$team) }}" enctype="multipart/form-data">
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+                <form role="form" class="form" method="post" action="{{ route('contacts.update',$team) }}" enctype="multipart/form-data">
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                     @csrf
                     {{ method_field('PUT') }}
                     <div class="card-body">
@@ -43,7 +51,10 @@
                                 </div>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
@@ -66,7 +77,10 @@
                                     @endif
                                 </div>
                             </div>
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="description">Description</label>
@@ -76,14 +90,20 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                                     <label for="phone">Contact Number</label>
                                     <input type="number" name="phone" value="{{ $team->phone }}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                                     <label for="photo">Image</label>
                                     <input type="file" name="photo" class="form-control">
                                 </div>
@@ -111,10 +131,14 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a href="{{ route('teams.index') }}" class="btn btn-danger">Cancel</a>
 =======
                         <a href="{{ route('contacts.index') }}" class="btn btn-danger">Cancel</a>
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+                        <a href="{{ route('contacts.index') }}" class="btn btn-danger">Cancel</a>
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                     </div>
                 </form>
             </div>

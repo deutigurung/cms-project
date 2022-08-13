@@ -59,42 +59,18 @@
                         </ul>
                     </div>
                     <div class="widget recent-post-widget">
-                        <h3>Recent post</h3>
+                        <h3>Most View Post</h3>
                         <ul>
-                            <li>
-                                <div class="post-pic">
-                                    <img src="assets/images/blog/thumb/img-1.jpg" alt>
-                                </div>
-                                <div class="details">
-                                    <h4><a href="#">Micenas placerat nibh loreming fentum</a></h4>
-                                    <span>Sep 25, 2016</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="post-pic">
-                                    <img src="assets/images/blog/thumb/img-2.jpg" alt>
-                                </div>
-                                <div class="details">
-                                    <h4><a href="#">Integer suscipit sit amet</a></h4>
-                                    <span>Sep 25, 2016</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="post-pic">
-                                    <img src="assets/images/blog/thumb/img-3.jpg" alt>
-                                </div>
-                                <div class="details">
-                                    <h4><a href="#">Praeent vehicula neget tempus</a></h4>
-                                    <span>Sep 25, 2016</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="widget archive-widget">
-                        <h3>Archive</h3>
-                        <ul>
-                            @foreach($Blogs as $blog)
-                                <li><a href="#">{{  date('F Y',strtotime($blog->created_at)) }} <span class="badge">12</span></a></li>
+                            @foreach($MostView as $view)
+                                <li>
+                                    <div class="post-pic">
+                                        <img src="{{ asset('uploads/blogs/'.$view->image) }}" alt>
+                                    </div>
+                                    <div class="details">
+                                        <h4><a href="{{ route('front.blogBySlug',$view->slug) }}">{{ $view->title }}</a></h4>
+                                        <span>{{ date('M d,Y',strtotime($view->created_at)) }}</span>
+                                    </div>
+                                </li>
                             @endforeach
                         </ul>
                     </div>

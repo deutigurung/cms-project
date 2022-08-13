@@ -2,10 +2,14 @@
 
 @section('content_header')
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h1 class="m-0 text-dark">Add Team</h1>
 =======
     <h1 class="m-0 text-dark">Add Contact</h1>
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+    <h1 class="m-0 text-dark">Add Contact</h1>
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 @stop
 
 @section('content')
@@ -13,10 +17,14 @@
         <div class="col-12">
             <div class="card">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <form role="form" class="form" method="post" action="{{ route('teams.store') }}" enctype="multipart/form-data">
 =======
                 <form role="form" class="form" method="post" action="{{ route('contacts.store') }}" enctype="multipart/form-data">
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+                <form role="form" class="form" method="post" action="{{ route('contacts.store') }}" enctype="multipart/form-data">
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                     @csrf
                     <div class="card-body">
                         <div class="row">
@@ -45,7 +53,10 @@
                             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="email">Email</label>
@@ -70,7 +81,10 @@
                                 </div>
                             </div>
 
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="description">Description</label>
@@ -78,8 +92,11 @@
                                 </div>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <div class="col-sm-12">
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="phone">Contact Number</label>
@@ -87,7 +104,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
                                 <div class="form-group">
                                     <label for="photo">Image</label>
                                     <input type="file" name="photo" class="form-control">

@@ -6,12 +6,18 @@ use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Models\Faq;
 =======
 use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Notification;
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+use App\Models\Event;
+use App\Models\Faq;
+use App\Models\Notification;
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 use App\Models\Page;
 use App\Models\Partners;
 use App\Models\Project;
@@ -32,6 +38,7 @@ class FrontendController extends Controller
         $Faqs = Faq::latest()->get();
         $Blogs = Blog::where('status', 1)->latest()->get();
         $Projects = Project::where('status', 1)->latest()->get();
+<<<<<<< HEAD
 <<<<<<< HEAD
         return view('frontend.index',compact('SliderBanners','Services',
             'Testimonials','Partners','Faqs','Blogs','Projects'));
@@ -63,6 +70,8 @@ class FrontendController extends Controller
         return view('frontend.pages',compact('Pages'));
     }
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
         return view('frontend.index', compact('SliderBanners', 'Services',
             'Testimonials', 'Partners', 'Faqs', 'Blogs', 'Projects'));
     }
@@ -88,6 +97,7 @@ class FrontendController extends Controller
     public function serviceBySlug($slug)
     {
         $Service = Service::where('slug', $slug)->where('status', 1)->first();
+        Service::find($Service->id)->increment('total_views');
         $ServiceAll = Service::where('status', 1)->where('id', '!=', $Service->id)->latest()->get();
         return view('frontend.services.service-single', compact('Service', 'ServiceAll'));
     }
@@ -108,14 +118,19 @@ class FrontendController extends Controller
     public function pageByUrl($url)
     {
         $Pages = Page::where('url', $url)->where('status', 1)->first();
+        Page::find($Pages->id)->increment('total_views');
         return view('frontend.pages', compact('Pages'));
     }
 
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
     public function blogs()
     {
         $Blogs = Blog::where('status', 1)->latest()->get();
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
+<<<<<<< HEAD
 <<<<<<< HEAD
         return view('frontend.blogs.blog',compact('Blogs','BlogCategories'));
     }
@@ -145,14 +160,20 @@ class FrontendController extends Controller
     }
 =======
         return view('frontend.blogs.blog', compact('Blogs', 'BlogCategories'));
+=======
+        $MostView = BLog::where('status', 1)->orderBy('total_views','desc')->limit(6)->get();
+        return view('frontend.blogs.blog', compact('Blogs', 'BlogCategories','MostView'));
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
     }
 
     public function blogBySlug($slug)
     {
         $BlogAll = Blog::where('status', 1)->latest()->get();
         $Blog = Blog::where('slug', $slug)->where('status', 1)->first();
+        Blog::find($Blog->id)->increment('total_views');
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
-        return view('frontend.blogs.blog-detail', compact('Blog', 'BlogAll', 'BlogCategories'));
+        $MostView = BLog::where('id','!=',$Blog->id)->where('status', 1)->orderBy('total_views','desc')->limit(6)->get();
+        return view('frontend.blogs.blog-detail', compact('Blog', 'BlogAll', 'BlogCategories','MostView'));
     }
 
     public function projects()
@@ -164,6 +185,7 @@ class FrontendController extends Controller
     public function projectBySlug($slug)
     {
         $Project = Project::where('slug', $slug)->where('status', 1)->first();
+        Blog::find($Project->id)->increment('total_views');
         return view('frontend.projects.project-single', compact('Project'));
     }
 
@@ -175,11 +197,15 @@ class FrontendController extends Controller
         return view('frontend.about', compact('About', 'Teams', 'Partners'));
     }
 
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
     public function contact()
     {
         return view('frontend.contact');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function queryForm(Request $request)
     {
@@ -198,6 +224,8 @@ class FrontendController extends Controller
         return json_encode(array(
             "statusCode"=>200
 =======
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 
     public function queryForm(Request $request)
     {
@@ -221,7 +249,10 @@ class FrontendController extends Controller
         ]);
         return json_encode(array(
             "statusCode" => 200
+<<<<<<< HEAD
 >>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
+=======
+>>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
         ));
     }
 }
