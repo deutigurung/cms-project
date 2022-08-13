@@ -27,6 +27,7 @@
                             <th>Image</th>
                             <th>Name</th>
                             <th>Status</th>
+                            <th>Total Views</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -40,6 +41,7 @@
                                 </td>
                                 <td>{{ $service->title }}</td>
                                 <td>{{ $service->status == 1 ? 'Active' : 'Inactive' }}</td>
+                                <td>{{ $service->total_views }}</td>
                                 <td>
                                     <form method="POST" action="{{ route('services.destroy',$service->id) }}" class="confirmation">
                                         <input type="hidden" name="_method" value="DELETE" />

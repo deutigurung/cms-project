@@ -15,7 +15,7 @@ class Blog extends Model
         'title','slug',
         'content',
         'image',
-        'blog_category_id','status','tags'
+        'blog_category_id','status','tags','total_views'
     ];
 
     public function blogCategory(){

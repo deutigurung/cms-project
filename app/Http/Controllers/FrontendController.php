@@ -53,6 +53,7 @@ class FrontendController extends Controller
     public function serviceBySlug($slug)
     {
         $Service = Service::where('slug', $slug)->where('status', 1)->first();
+        Service::find($Service->id)->increment('total_views');
         $ServiceAll = Service::where('status', 1)->where('id', '!=', $Service->id)->latest()->get();
         return view('frontend.services.service-single', compact('Service', 'ServiceAll'));
     }
@@ -73,6 +74,7 @@ class FrontendController extends Controller
     public function pageByUrl($url)
     {
         $Pages = Page::where('url', $url)->where('status', 1)->first();
+        Page::find($Pages->id)->increment('total_views');
         return view('frontend.pages', compact('Pages'));
     }
 
@@ -87,6 +89,7 @@ class FrontendController extends Controller
     {
         $BlogAll = Blog::where('status', 1)->latest()->get();
         $Blog = Blog::where('slug', $slug)->where('status', 1)->first();
+        Blog::find($Blog->id)->increment('total_views');
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
         return view('frontend.blogs.blog-detail', compact('Blog', 'BlogAll', 'BlogCategories'));
     }
@@ -100,6 +103,7 @@ class FrontendController extends Controller
     public function projectBySlug($slug)
     {
         $Project = Project::where('slug', $slug)->where('status', 1)->first();
+        Blog::find($Project->id)->increment('total_views');
         return view('frontend.projects.project-single', compact('Project'));
     }
 
