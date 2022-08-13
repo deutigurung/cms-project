@@ -82,14 +82,6 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="widget archive-widget">
-                        <h3>Archive</h3>
-                        <ul>
-                            @foreach($BlogAll as $blog)
-                                <li><a href="#">{{  date('F Y',strtotime($blog->created_at)) }} <span class="badge">12</span></a></li>
-                            @endforeach
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div> <!-- end container -->
