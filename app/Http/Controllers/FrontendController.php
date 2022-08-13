@@ -91,7 +91,8 @@ class FrontendController extends Controller
         $Blog = Blog::where('slug', $slug)->where('status', 1)->first();
         Blog::find($Blog->id)->increment('total_views');
         $BlogCategories = BlogCategory::where('status', 1)->latest()->get();
-        return view('frontend.blogs.blog-detail', compact('Blog', 'BlogAll', 'BlogCategories'));
+        $MostView = BLog::where('id','!=',$Blog->id)->where('status', 1)->orderBy('total_views','desc')->limit(3)->get();
+        return view('frontend.blogs.blog-detail', compact('Blog', 'BlogAll', 'BlogCategories','MostView'));
     }
 
     public function projects()
