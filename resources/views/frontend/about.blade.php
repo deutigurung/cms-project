@@ -104,55 +104,6 @@
     </section>
     <!-- end features -->
 
-    <!-- start our-team -->
-    <section class="our-team our-team-bg section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col col-md-8 col-md-offset-2">
-                    <div class="section-title-s5">
-                        <h2>Our team</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col col-lg-10 col-lg-offset-1">
-                    <div class="team-slider team-grids">
-                        @foreach($Teams as $team)
-                            <div class="team-grid">
-                            <div class="member-pic-social square-hover-effect-parent">
-                                <div class="square-hover-effect">
-                                    <span class="hover-1"></span>
-                                    <span class="hover-2"></span>
-                                    <span class="hover-3"></span>
-                                    <span class="hover-4"></span>
-                                </div>
-                                <div class="member-pic">
-                                    <img src="{{ asset('uploads/teams/'.$team->photo) }}" alt>
-                                </div>
-                                <div class="social">
-                                    <ul class="social-links">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h3>{{ $team->title }}</h3>
-                                <p>{{ $team->designation }}</p>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-
-        </div> <!-- end container -->
-    </section>
-    <!-- end our-team -->
-
     <!-- start fun-fact -->
     <section class="fun-fact">
         <div class="container">

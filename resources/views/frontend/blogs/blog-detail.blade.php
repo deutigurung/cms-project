@@ -53,11 +53,7 @@
                 </div> <!-- end blog-content -->
 
                 <div class="blog-sidebar col col-lg-3 col-lg-offset-1 col-md-3 col-sm-5">
-                    <div class="widget search-widget">
-                        <form class="form">
-                            <input type="text" class="form-control" placeholder="Search here..">
-                        </form>
-                    </div>
+
                     <div class="widget category-widget">
                         <h3>Category</h3>
                         <ul>

@@ -39,7 +39,7 @@ class PageController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required|string|max:255|unique:pages',
-            'url' => 'nullable|string',
+            'url' => 'required|string',
             'date' => 'nullable|date',
             'quote' => 'nullable',
             'description' => 'nullable|string',

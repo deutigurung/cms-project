@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'CMS',
+    'title' => 'FIS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -47,7 +47,7 @@ return [
     */
 
 
-    'logo' => '<b>CMS</b>',
+    'logo' => '<b>FIS</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -283,12 +283,14 @@ return [
                     'url'  => 'admin/services',
                 ],
                 [
-                    'text' => 'Teams',
-                    'url'  => 'admin/teams',
-                ],
-                [
                     'text'    => 'Blog',
                     'url'     => 'admin/blogs',
+                    [
+                        'text' => 'Blog Category',
+                        'icon_color' => 'red',
+                        'url'  => 'admin/blogCategory',
+                        'can'        => ['admin', 'systemuser'],
+                    ],
                 ],
                 [
                     'text' => 'Events',
@@ -345,22 +347,10 @@ return [
         ],
         ['header' => 'Configuration'],
         [
-            'text'       => 'General',
-            'icon_color' => 'red',
+            'text'       => 'Setting',
+            'icon'       => 'fas fa-fw fa-gear',
             'url'        => 'admin/settings',
             'can'       => 'admin',
-        ],
-        [
-            'text' => 'Blog Category',
-            'icon_color' => 'red',
-            'url'  => 'admin/blogCategory',
-            'can'        => ['admin', 'systemuser'],
-        ],
-        [
-            'text'       => 'Blog Category',
-            'icon_color' => 'red',
-            'url'        => 'admin/blogCategory',
-            'can'        => ['admin', 'systemuser'],
         ],
         [
             'text'       => 'Menu',

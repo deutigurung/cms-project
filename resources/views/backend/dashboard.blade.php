@@ -1,10 +1,4 @@
 @extends('adminlte::page')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 @section('content_top_nav_right')
     <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -24,10 +18,6 @@
         </div>
     </li>
 @endsection
-<<<<<<< HEAD
->>>>>>> fa582ccc30c5c5f275c37646d78258783be695f4
-=======
->>>>>>> 87e4c50425f5e31ccb0cc61cade9d906597c20dd
 @section('title', 'Dashboard')
 
 @section('content_header')

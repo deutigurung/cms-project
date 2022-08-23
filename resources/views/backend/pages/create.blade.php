@@ -25,7 +25,7 @@
 
                         <div class="form-group">
                             <label for="url">Url</label>
-                            <input id="url" type="text" class="form-control{{ $errors->has('url') ? ' is-invalid' : '' }}" name="url" value="{{ old('url') }}" placeholder="Enter Page Title" autofocus>
+                            <input id="url" type="text" class="form-control{{ $errors->has('url') ? ' is-invalid' : '' }}" name="url" value="{{ old('url') }}" placeholder="Page Url" autofocus>
                             @if ($errors->has('url'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('url') }}</strong>
